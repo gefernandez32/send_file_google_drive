@@ -18,7 +18,7 @@ app = FastAPI()
 # Definir los alcances para Google Drive y Gmail
 SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
-    "https://www.googleapis.com/auth/gmail.readonly"
+    "https://www.googleapis.com/auth/gmail.send"
 ]
 
 SENDER_EMAIL = "fernandez.emir@gmail.com"
