@@ -91,8 +91,8 @@ def send_email_with_attachment(file_name: str, file_data: bytes):
         raise HTTPException(status_code=500, detail=f"Error al enviar el correo: {str(e)}")
 
 
-@app.get("/download-file/")
-async def download_file(folder_name: str, file_name: str):
+@app.get("/download-and-email-file/")
+async def download_and_email_file(folder_name: str, file_name: str):
     """Descarga un archivo de Google Drive y lo envía por correo."""
     try:
         service = get_gdrive_service()
