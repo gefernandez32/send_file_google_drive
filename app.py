@@ -15,6 +15,16 @@ import smtplib
 
 app = FastAPI()
 
+app = FastAPI(
+    title="Google Drive - Gmail API Sender",
+    description="Esta API se encarga de leer archivos de google drive y enviarlos por correo.",
+    version="1.0.0",
+    servers=[
+        {"url": "https://send-file-google-drive.onrender.com", "description": "Servidor de producción"},
+        {"url": "http://localhost:8000", "description": "Servidor local"},
+    ],
+)
+
 # Definir los alcances para Google Drive y Gmail
 SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
