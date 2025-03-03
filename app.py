@@ -1,6 +1,12 @@
 import os
 import base64
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import io
+import fitz
+import segno
+from io import BytesIO
+import logging
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -12,6 +18,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 import smtplib
+
+
 
 app = FastAPI()
 
