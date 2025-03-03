@@ -24,8 +24,8 @@ import smtplib
 app = FastAPI()
 
 app = FastAPI(
-    title="Google Drive - Gmail API Sender",
-    description="Esta API se encarga de leer archivos de google drive y enviarlos por correo.",
+    title="Python para Desarrolladores Genexus",
+    description="Esta API es la que usaremos en la formación de Python para Desarrolladores Genexus",
     version="1.0.0",
     servers=[
         {"url": "https://send-file-google-drive.onrender.com", "description": "Servidor de producción"},
